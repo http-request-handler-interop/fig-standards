@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="480px" height="200px">
+	<defs>
+		<g id="mixed" font-size="12px" font-family="Verdana,Helvetica,Arial,sans-serif">
+			<rect width="90" height="36" fill="none" stroke="#000"/>
+			<text text-anchor="middle" x="45" y="16">«dataType»</text>
+			<text text-anchor="middle" x="45" y="30" font-style="italic">mixed</text>
+		</g>
+		<g id="callable" font-size="12px" font-family="Verdana,Helvetica,Arial,sans-serif">
+			<rect width="90" height="36" fill="none" stroke="#000"/>
+			<text text-anchor="middle" x="45" y="16">«dataType»</text>
+			<text text-anchor="middle" x="45" y="30" font-style="italic">callable</text>
+		</g>
+		<g id="handle" font-size="12px" font-family="Verdana,Helvetica,Arial,sans-serif">
+			<rect width="220" height="60" fill="none" stroke="#000"/>
+			<text text-anchor="middle" x="110" y="16">«interface»</text>
+			<text text-anchor="middle" x="110" y="30">RequestHandlerInterface</text>
+			<path d="m0,36h220" fill="none" stroke="#000"/>
+			<text text-anchor="middle" x="110" y="52">handle(:ServerRequestInterface)</text>
+		</g>
+		<g id="invoke" font-size="12px" font-family="Verdana,Helvetica,Arial,sans-serif">
+			<rect width="230" height="60" fill="none" stroke="#000"/>
+			<text text-anchor="middle" x="115" y="16">«interface»</text>
+			<text text-anchor="middle" x="115" y="30">ActionInterface</text>
+			<path d="m0,36h230" fill="none" stroke="#000"/>
+			<text text-anchor="middle" x="115" y="52">__invoke(:ServerRequestInterface)</text>
+		</g>
+		<marker id="inheritance" markerWidth="12" markerHeight="14" refX="1" refY="6" orient="auto" markerUnits="strokeWidth">
+			<path d="m1,1v10l8,-5z" stroke="#000" fill="none"/>
+		</marker>
+	</defs>
+
+	<rect width="480" height="200" fill="#fff"/>
+
+	<use xlink:href="#mixed" x="75" y="10"/>
+	<path d="M120,130V55" stroke="#000" marker-end="url(#inheritance)"/>
+	<use xlink:href="#handle" x="10" y="130"/>
+
+	<use xlink:href="#mixed" x="310" y="10"/>
+	<path d="M355,70V55" stroke="#000" marker-end="url(#inheritance)"/>
+	<use xlink:href="#callable" x="310" y="70"/>
+	<path d="M355,130V115" stroke="#000" marker-end="url(#inheritance)"/>
+	<use xlink:href="#invoke" x="240" y="130"/>
+</svg>
